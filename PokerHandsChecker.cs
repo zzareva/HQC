@@ -8,11 +8,17 @@ namespace Poker
 	{
 		public const int HandSize = 5;
 
+		/// <summary>
+		/// Checks if the hand contains exactly five cards
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>Returns true if the hand consists of five cards and has no repeating cards</returns>
 		public bool IsValidHand(IHand hand)
 		{
 			var isValid = true;
 			if (hand.Cards.Count != HandSize)
 			{
+
 				isValid = false;
 			}
 			else if (!ContainsRepeatingCards(hand))
@@ -22,6 +28,11 @@ namespace Poker
 			return isValid;
 		}
 
+		/// <summary>
+		/// Checks if the hand contains repeated cards
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>True if any repeating cards are found</returns>
 		private bool ContainsRepeatingCards(IHand hand)
 		{
 			var cards = hand.Cards;
@@ -36,6 +47,11 @@ namespace Poker
 			return true;
 		}
 
+		/// <summary>
+		/// Checks if the hand is a strraight flush hand 
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>True if the hand is a straight flush hand</returns>
 		public bool IsStraightFlush(IHand hand)
 		{
 			bool isStraightFull = false;
@@ -81,6 +97,11 @@ namespace Poker
 			return false;
 		}
 
+		/// <summary>
+		/// Checks if the hand contains four of a kind cards 
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>True if the hand contains four of a kind cards</returns>
 		public bool IsFourOfAKind(IHand hand)
 		{
 			var cards = hand.Cards.ToList();
@@ -96,6 +117,11 @@ namespace Poker
 			return false;
 		}
 
+		/// <summary>
+		/// Checks if the hand is a full house hand
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>True if the hand is a full house hand</returns>
 		public bool IsFullHouse(IHand hand)
 		{
 			if (GetThreeOfAKind(hand) != -1 && ContainsOnePair(hand))
@@ -105,6 +131,11 @@ namespace Poker
 			return false;
 		}
 
+		/// <summary>
+		/// Checks if the hand is a flush
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>True if the hand is a flush</returns>
 		public bool IsFlush(IHand hand)
 		{
 			var cards = hand.Cards.ToList();
@@ -118,6 +149,11 @@ namespace Poker
 			return true;
 		}
 
+		/// <summary>
+		/// Checks if the hand is a straight
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>Returns true if the hand is a straigh hand</returns>
 		public bool IsStraight(IHand hand)
 		{
 			var cards = hand.Cards.ToList();
@@ -125,6 +161,11 @@ namespace Poker
 			return AreSequence(cards) && !IsFlush(hand);
 		}
 
+		/// <summary>
+		/// Checks if the hand contains three of a kind cards
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>Returns true if the hand contains three cards from the same face and does not qualify fo a full house hand</returns>
 		public bool IsThreeOfAKind(IHand hand)
 		{
 			if (GetThreeOfAKind(hand) != -1 && !ContainsOnePair(hand))
@@ -134,6 +175,10 @@ namespace Poker
 			return false;
 		}
 
+		/// <summary>
+		/// Checks if the hand contains three cards from the same face
+		/// </summary>
+		/// <returns>Returns true if  the hand contains three cards from the same face</returns>
 		private int GetThreeOfAKind(IHand hand)
 		{
 			var cards = hand.Cards.ToList();
@@ -148,12 +193,20 @@ namespace Poker
 			return -1;
 		}
 
+		/// <summary>
+		/// Checks if the hand contains two pairs
+		/// </summary>
+		/// <returns>Returns true if  the hand contains two pairs</returns>
 		public bool ContainsTwoPair(IHand hand)
 		{
 			int pairs = CountPairs(hand);
 			return pairs == 2;
 		}
 
+		/// <summary>
+		/// Checks if the hand contains one pair
+		/// </summary>
+		/// <returns>Returns true if  the hand contains one pair</returns>
 		public bool ContainsOnePair(IHand hand)
 		{
 			int pairs = CountPairs(hand);
@@ -176,6 +229,11 @@ namespace Poker
 			return countOfPairs;
 		}
 
+		/// <summary>
+		/// Checks if the hand qualifies as a high hand by not qualifying for any other specific type of hands
+		/// </summary>
+		/// <param name="hand">Hand to be checked</param>
+		/// <returns>Returns true if no other type of hands are valid</returns>
 		public bool IsHighCard(IHand hand)
 		{
 			bool isHighHand = true;

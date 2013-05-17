@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker", "Poker.csproj", "{2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPoker", "..\TestPoker\TestPoker.csproj", "{D8962EE5-9888-4767-A17B-9DC87DCBFE20}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "PokerDocumentation", "PokerDocumentation\PokerDocumentation.shfbproj", "{1B40D67F-154F-49BD-8D75-50A865250DBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{D8962EE5-9888-4767-A17B-9DC87DCBFE20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8962EE5-9888-4767-A17B-9DC87DCBFE20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8962EE5-9888-4767-A17B-9DC87DCBFE20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B40D67F-154F-49BD-8D75-50A865250DBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B40D67F-154F-49BD-8D75-50A865250DBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B40D67F-154F-49BD-8D75-50A865250DBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B40D67F-154F-49BD-8D75-50A865250DBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

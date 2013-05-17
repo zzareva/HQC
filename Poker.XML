@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Poker</name>
+    </assembly>
+    <members>
+        <member name="M:Poker.Card.ToString">
+            <summary>
+            Returns the Card as string
+            </summary>
+            <returns>The string value of the cards</returns>
+        </member>
+        <member name="T:Poker.IPokerHandsChecker">
+            <summary>
+            Interface for checking poker hands as defined in http://en.wikipedia.org/wiki/List_of_poker_hands.
+            </summary>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.IsValidHand(Poker.IHand)">
+            <summary>
+            Checks if the hand contains exactly five cards
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>Returns true if the hand consists of five cards and has no repeating cards</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.ContainsRepeatingCards(Poker.IHand)">
+            <summary>
+            Checks if the hand contains repeated cards
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>True if any repeating cards are found</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.IsStraightFlush(Poker.IHand)">
+            <summary>
+            Checks if the hand is a strraight flush hand 
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>True if the hand is a straight flush hand</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.IsFourOfAKind(Poker.IHand)">
+            <summary>
+            Checks if the hand contains four of a kind cards 
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>True if the hand contains four of a kind cards</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.IsFullHouse(Poker.IHand)">
+            <summary>
+            Checks if the hand is a full house hand
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>True if the hand is a full house hand</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.IsFlush(Poker.IHand)">
+            <summary>
+            Checks if the hand is a flush
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>True if the hand is a flush</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.IsStraight(Poker.IHand)">
+            <summary>
+            Checks if the hand is a straight
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>Returns true if the hand is a straigh hand</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.IsThreeOfAKind(Poker.IHand)">
+            <summary>
+            Checks if the hand contains three of a kind cards
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>Returns true if the hand contains three cards from the same face and does not qualify fo a full house hand</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.GetThreeOfAKind(Poker.IHand)">
+            <summary>
+            Checks if the hand contains three cards from the same face
+            </summary>
+            <returns>Returns true if  the hand contains three cards from the same face</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.ContainsTwoPair(Poker.IHand)">
+            <summary>
+            Checks if the hand contains two pairs
+            </summary>
+            <returns>Returns true if  the hand contains two pairs</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.ContainsOnePair(Poker.IHand)">
+            <summary>
+            Checks if the hand contains one pair
+            </summary>
+            <returns>Returns true if  the hand contains one pair</returns>
+        </member>
+        <member name="M:Poker.PokerHandsChecker.IsHighCard(Poker.IHand)">
+            <summary>
+            Checks if the hand qualifies as a high hand by not qualifying for any other specific type of hands
+            </summary>
+            <param name="hand">Hand to be checked</param>
+            <returns>Returns true if no other type of hands are valid</returns>
+        </member>
+    </members>
+</doc>

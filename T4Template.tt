@@ -1,0 +1,14 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ output extension=".cs" #>
+
+class PokerTTExample
+    {
+	<# for(int i = 0; i < 3; i++) { #>
+		public Hand hand<#=i#> { get; set; }
+	<#} #>
+		public Ilist<ICard> cards { get; set; }
+}

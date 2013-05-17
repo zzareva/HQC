@@ -12,7 +12,10 @@ namespace Poker
             this.Face = face;
             this.Suit = suit;
         }
-
+		/// <summary>
+		/// Returns the Card as string
+		/// </summary>
+		/// <returns>The string value of the cards</returns>
 		public override string ToString()
 		{
 			var cardToSting = "";
